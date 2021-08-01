@@ -10,30 +10,43 @@ import UIKit
 
 final class HomeView: BaseView {
    let imageView: UIImageView = {
-    let view = UIImageView()
-    view.contentMode = .scaleAspectFit
-    view.translatesAutoresizingMaskIntoConstraints = false
-    return view
+    return UIImageViewBuilder()
+      .withContentModeScaleAspectFit()
+      .build()
   }()
   let titleLabel: UILabel = {
-    let label = UILabel()
-    label.numberOfLines = 0
-    label.textColor = .black
-    label.font = .systemFont(ofSize: 20, weight: .heavy)
-    return label
+    return UILabelBuilder()
+      .withSystemFont20Heavy()
+      .build()
   }()
   let subtitleLabel: UILabel = {
-    let label = UILabel()
-    label.numberOfLines = 0
-    label.textColor = UIColor.gray
-    label.font = .systemFont(ofSize: 16, weight: .bold)
-    return label
+    return UILabelBuilder()
+      .withTextColorGray()
+      .withSystemFont16Bold()
+      .build()
+  }()
+  let buttonConfirm: UIButton = {
+    let button = UIButtonBuilder()
+      .build()
+    button.setTitle("Confirmar", for: .normal)
+    return button
+  }()
+  let buttonCancel: UIButton = {
+    let button = UIButtonBuilder()
+      .withGrayColor()
+      .build()
+    button.setTitle("Cancelar", for: .normal)
+    return button
   }()
   private lazy var labelStackView: UIStackView = {
-    let stackView = UIStackView(arrangedSubviews: [imageView, titleLabel, subtitleLabel])
+    let stackView = UIStackView(arrangedSubviews: [imageView,
+                                                   titleLabel,
+                                                   subtitleLabel,
+                                                   buttonConfirm,
+                                                   buttonCancel])
     stackView.axis = .vertical
     stackView.spacing = 6
-    stackView.alignment = .leading
+    stackView.alignment = .center
     stackView.translatesAutoresizingMaskIntoConstraints = false
     return stackView
   }()
@@ -56,6 +69,12 @@ final class HomeView: BaseView {
       imageView.heightAnchor.constraint(equalToConstant: 150),
       imageView.widthAnchor.constraint(equalToConstant: 150),
       imageView.centerXAnchor.constraint(equalTo: layoutMarginsGuide.centerXAnchor),
+      
+      buttonConfirm.widthAnchor.constraint(equalTo: layoutMarginsGuide.widthAnchor),
+      buttonConfirm.heightAnchor.constraint(equalToConstant: 45),
+      
+      buttonCancel.widthAnchor.constraint(equalTo: layoutMarginsGuide.widthAnchor),
+      buttonCancel.heightAnchor.constraint(equalToConstant: 45)
     ])
   }
 }
