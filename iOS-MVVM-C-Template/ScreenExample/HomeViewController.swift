@@ -39,8 +39,20 @@ final class HomeViewController: UIViewController {
 
   private func setupBinds() {
     //Call screens configuration here, like:
+    configNavigationBar()
     baseView.titleLabel.text = viewModel.titleLabel
     baseView.subtitleLabel.text = viewModel.subTitleLabel
     baseView.imageView.image = UIImage(named: viewModel.imageName)
   }
 }
+
+// MARK: - HomeViewController
+
+extension HomeViewController {
+  //you can rewrite the bar color writen on appDelegate previously
+  func configNavigationBar() {
+    title = viewModel.navigationTitle
+  }
+}
+
+

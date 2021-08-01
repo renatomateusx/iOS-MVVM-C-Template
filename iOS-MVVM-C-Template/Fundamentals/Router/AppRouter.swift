@@ -27,7 +27,8 @@ class AppRouter: Router {
   }
 
   func start() {
-    let loginRouter = HomeRouter(presenter: navigationController, navigationDelegate: self, false) // You can define the last param as false to not use modal, the default is true.
+    // You can define the last param as false to not use modal, the default is true.
+    let loginRouter = HomeRouter(presenter: navigationController, navigationDelegate: self, false)
     addChildRouter(loginRouter)
     loginRouter.start()
   }

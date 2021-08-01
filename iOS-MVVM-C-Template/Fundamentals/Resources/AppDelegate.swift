@@ -24,7 +24,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     self.appRouter = appRouter
 
     appRouter.start()
+    configureBar()
+    
     return true
+  }
+  
+  func configureBar() {
+    let barAppearance = UINavigationBar.appearance()
+    barAppearance.barTintColor = UIColor.gray
+    barAppearance.tintColor = UIColor.white
+    barAppearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
   }
 }
 

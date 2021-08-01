@@ -13,7 +13,7 @@ protocol HomeNavigationDelegate: AnyObject {
   func close()
 }
 
-protocol HomeViewModelProtocol: AnyObject {
+protocol HomeViewModelProtocol: AnyObject, NavigationTitle {
   var imageName: String { get }
   var titleLabel: String { get }
   var subTitleLabel: String { get }
@@ -24,6 +24,7 @@ protocol HomeViewModelProtocol: AnyObject {
 final class HomeViewModel {
   private weak var navigationDelegate: HomeNavigationDelegate?
   
+  let navigationTitle = "Home View"
   let imageName = "Home"
   let titleLabel = "Title Label"
   let subTitleLabel = "SubTitle Label"

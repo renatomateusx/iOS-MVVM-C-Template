@@ -31,6 +31,7 @@ final class HomeRouter: Router {
     if usingModal {
       let viewModel = HomeViewModel(navigationDelegate: self)
       let viewController = HomeViewController(viewModel: viewModel)
+      viewController.prefersStatusBarHidden
       let navigationController = UINavigationController(rootViewController: viewController)
       if #available(iOS 13, *) {
         navigationController.isModalInPresentation = true

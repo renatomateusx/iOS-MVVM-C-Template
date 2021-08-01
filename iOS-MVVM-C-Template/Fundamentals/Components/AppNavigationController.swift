@@ -16,14 +16,14 @@ final class AppNavigationController: UINavigationController {
   }
 
   private func configureNavigation() {
-    navigationBar.barTintColor = .white
-    view.backgroundColor = .white
-    navigationBar.tintColor = .red
+    navigationBar.barTintColor = .gray
+    view.backgroundColor = .gray
+    navigationBar.tintColor = .white
     navigationBar.isTranslucent = false
     navigationBar.setBackgroundImage(UIImage(), for: .default)
     navigationBar.shadowImage = UIImage()
     let attrs = [
-      NSAttributedString.Key.foregroundColor: UIColor.green.cgColor,
+      NSAttributedString.Key.foregroundColor: UIColor.white.cgColor,
       NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 16)
     ] as [NSAttributedString.Key : Any]
 
