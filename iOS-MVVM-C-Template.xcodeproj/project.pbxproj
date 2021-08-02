@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		417BF2C626B81F5900CD51D5 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417BF2C526B81F5800CD51D5 /* NetworkService.swift */; };
+		417BF2CE26B8624C00CD51D5 /* HomeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417BF2CD26B8624C00CD51D5 /* HomeModels.swift */; };
 		4185D5F426B73E5D0086A47A /* Label-Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4185D5F326B73E5D0086A47A /* Label-Extensions.swift */; };
 		4185D5F926B744720086A47A /* ImageView-Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4185D5F826B744720086A47A /* ImageView-Extensions.swift */; };
 		4185D5FE26B749140086A47A /* Button-Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4185D5FD26B749140086A47A /* Button-Extensions.swift */; };
@@ -47,6 +49,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		417BF2C526B81F5800CD51D5 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		417BF2CD26B8624C00CD51D5 /* HomeModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModels.swift; sourceTree = "<group>"; };
 		4185D5F326B73E5D0086A47A /* Label-Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Label-Extensions.swift"; sourceTree = "<group>"; };
 		4185D5F826B744720086A47A /* ImageView-Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageView-Extensions.swift"; sourceTree = "<group>"; };
 		4185D5FD26B749140086A47A /* Button-Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button-Extensions.swift"; sourceTree = "<group>"; };
@@ -176,6 +180,7 @@
 				41DE101C26B5FE47007C6AB0 /* HomeView.swift */,
 				41DE102426B5FE84007C6AB0 /* HomeWorker.swift */,
 				41DE103C26B600F3007C6AB0 /* HomeRouter.swift */,
+				417BF2CD26B8624C00CD51D5 /* HomeModels.swift */,
 			);
 			path = ScreenExample;
 			sourceTree = "<group>";
@@ -187,6 +192,7 @@
 				4185D5F326B73E5D0086A47A /* Label-Extensions.swift */,
 				4185D5F826B744720086A47A /* ImageView-Extensions.swift */,
 				4185D5FD26B749140086A47A /* Button-Extensions.swift */,
+				417BF2C526B81F5800CD51D5 /* NetworkService.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -363,10 +369,12 @@
 				4185D5F426B73E5D0086A47A /* Label-Extensions.swift in Sources */,
 				41DE100E26B5FDCD007C6AB0 /* BaseView.swift in Sources */,
 				4185D5F926B744720086A47A /* ImageView-Extensions.swift in Sources */,
+				417BF2CE26B8624C00CD51D5 /* HomeModels.swift in Sources */,
 				41DE0FD726B5FD82007C6AB0 /* HomeViewController.swift in Sources */,
 				41DE0FD326B5FD82007C6AB0 /* AppDelegate.swift in Sources */,
 				41DE102D26B5FED6007C6AB0 /* Router.swift in Sources */,
 				41DE104E26B624B4007C6AB0 /* Makefile in Sources */,
+				417BF2C626B81F5900CD51D5 /* NetworkService.swift in Sources */,
 				41DE103226B5FFA6007C6AB0 /* AppRouter.swift in Sources */,
 				4185D5FE26B749140086A47A /* Button-Extensions.swift in Sources */,
 				41DE101D26B5FE47007C6AB0 /* HomeView.swift in Sources */,

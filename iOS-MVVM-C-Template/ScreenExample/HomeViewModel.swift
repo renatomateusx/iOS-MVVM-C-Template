@@ -19,9 +19,11 @@ protocol HomeViewModelProtocol: AnyObject, NavigationTitle {
   var subTitleLabel: String { get }
   
   func doSomething()
+  func getConsent()
 }
 
 final class HomeViewModel {
+  private var service: HomeWorker
   private weak var navigationDelegate: HomeNavigationDelegate?
   
   let navigationTitle = "Home View"
@@ -29,7 +31,9 @@ final class HomeViewModel {
   let titleLabel = "Title Label"
   let subTitleLabel = "SubTitle Label"
   
-  init(navigationDelegate: HomeNavigationDelegate? = nil) {
+  init(service: HomeWorker = HomeWorker(),
+       navigationDelegate: HomeNavigationDelegate? = nil) {
+    self.service = service
     self.navigationDelegate = navigationDelegate
   }
 }
@@ -39,5 +43,17 @@ final class HomeViewModel {
 extension HomeViewModel: HomeViewModelProtocol {
   func doSomething() {
     print("Example of implementing something")
+  }
+  
+  func getConsent() {
+    let request = HomeModel(token: "t38398wrsfasd")
+    service.getConsent(request: request) { result in
+      switch result {
+      case .success(let dataResult):
+        print("data Result: \(dataResult.token)")
+      case .failure(let error):
+        print("Error \(error.localizedDescription)")
+      }
+    }
   }
 }
