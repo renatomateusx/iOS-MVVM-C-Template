@@ -17,6 +17,8 @@ protocol HomeViewModelProtocol: AnyObject, NavigationTitle {
   var imageName: String { get }
   var titleLabel: String { get }
   var subTitleLabel: String { get }
+  var buttonCancelTitle: String { get }
+  var buttonConfirmTitle: String { get }
   
   func doSomething()
   func getConsent()
@@ -30,6 +32,8 @@ final class HomeViewModel {
   let imageName = "Home"
   let titleLabel = "Title Label"
   let subTitleLabel = "SubTitle Label"
+  let buttonCancelTitle = "Cancelar"
+  let buttonConfirmTitle = "Confirmar"
   
   init(service: HomeWorker = HomeWorker(),
        navigationDelegate: HomeNavigationDelegate? = nil) {

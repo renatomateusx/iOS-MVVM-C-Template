@@ -43,6 +43,8 @@ final class HomeViewController: UIViewController {
     baseView.titleLabel.text = viewModel.titleLabel
     baseView.subtitleLabel.text = viewModel.subTitleLabel
     baseView.imageView.image = UIImage(named: viewModel.imageName)
+    baseView.buttonCancel.setTitle(viewModel.buttonCancelTitle, for: .normal)
+    baseView.buttonConfirm.setTitle(viewModel.buttonConfirmTitle, for: .normal)
   }
 }
 

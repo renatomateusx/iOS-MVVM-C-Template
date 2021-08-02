@@ -28,14 +28,12 @@ final class HomeView: BaseView {
   let buttonConfirm: UIButton = {
     let button = UIButtonBuilder()
       .build()
-    button.setTitle("Confirmar", for: .normal)
     return button
   }()
   let buttonCancel: UIButton = {
     let button = UIButtonBuilder()
       .withGrayColor()
       .build()
-    button.setTitle("Cancelar", for: .normal)
     return button
   }()
   private lazy var labelStackView: UIStackView = {
