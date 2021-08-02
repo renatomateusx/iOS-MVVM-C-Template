@@ -10,8 +10,7 @@ import Foundation
 protocol HomeWorkerProtocol: AnyObject {
   typealias completionHandler<T> = (Result<T, Error>) -> Void
   
-  func getConsent(request: HomeModel,
-                  completion: @escaping completionHandler<HomeModel>)
+  func getConsent(completion: @escaping completionHandler<HomeModel>)
   func sendConsent(request: HomeModel,
                    completion: @escaping (Result<HomeModel, Error>) -> Void)
 }
@@ -25,7 +24,7 @@ class HomeWorker {
 }
 
 extension HomeWorker: HomeWorkerProtocol {
-  func getConsent(request: HomeModel, completion: @escaping completionHandler<HomeModel>) {
+  func getConsent(completion: @escaping completionHandler<HomeModel>) {
     let url = URL(string: "https://seiqueila")!
     self.service.request(for: url, completion: completion)
   }

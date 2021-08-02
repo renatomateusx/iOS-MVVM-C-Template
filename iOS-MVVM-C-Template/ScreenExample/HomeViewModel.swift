@@ -46,8 +46,7 @@ extension HomeViewModel: HomeViewModelProtocol {
   }
   
   func getConsent() {
-    let request = HomeModel(token: "t38398wrsfasd")
-    service.getConsent(request: request) { result in
+    service.getConsent() { result in
       switch result {
       case .success(let dataResult):
         print("data Result: \(dataResult.token)")
