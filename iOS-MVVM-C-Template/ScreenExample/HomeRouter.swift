@@ -28,19 +28,20 @@ final class HomeRouter: Router {
   // MARK: - Functions
   
   func start() {
-    if usingModal {
-      let viewModel = HomeViewModel(navigationDelegate: self)
-      let viewController = HomeViewController(viewModel: viewModel)
-      viewController.prefersStatusBarHidden
-      let navigationController = UINavigationController(rootViewController: viewController)
-      if #available(iOS 13, *) {
-        navigationController.isModalInPresentation = true
+    DispatchQueue.main.async {
+      if self.usingModal {
+        let viewModel = HomeViewModel(navigationDelegate: self)
+        let viewController = HomeViewController(viewModel: viewModel)
+        let navigationController = UINavigationController(rootViewController: viewController)
+        if #available(iOS 13, *) {
+          navigationController.isModalInPresentation = true
+        }
+        self.presenter.present(navigationController, animated: true)
+      } else {
+        let viewModel = HomeViewModel(navigationDelegate: self)
+        let viewController = HomeViewController(viewModel: viewModel)
+        self.presenter.pushViewController(viewController, animated: true)
       }
-      presenter.present(navigationController, animated: true)
-    } else {
-      let viewModel = HomeViewModel(navigationDelegate: self)
-      let viewController = HomeViewController(viewModel: viewModel)
-      presenter.pushViewController(viewController, animated: true)
     }
   }
 }
@@ -49,7 +50,11 @@ final class HomeRouter: Router {
 
 extension HomeRouter: HomeNavigationDelegate {
   func verifyMyData() {
-    print("Example")
+    DispatchQueue.main.async {
+      let viewModel = SecondSceneViewModel(navigationDelegate: self)
+      let viewController = SecondSceneViewController(viewModel: viewModel)
+      self.presenter.pushViewController(viewController, animated: true)
+    }
   }
   
   func postpone() {
@@ -59,6 +64,10 @@ extension HomeRouter: HomeNavigationDelegate {
   func close() {
     print("Example")
   }
-  
+}
+
+//MARK: - SecondSceneNavigationDelegate
+
+extension HomeRouter: SecondSceneNavigationDelegate {
   
 }

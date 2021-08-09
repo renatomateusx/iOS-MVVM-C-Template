@@ -12,6 +12,10 @@
 		4185D5F426B73E5D0086A47A /* Label-Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4185D5F326B73E5D0086A47A /* Label-Extensions.swift */; };
 		4185D5F926B744720086A47A /* ImageView-Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4185D5F826B744720086A47A /* ImageView-Extensions.swift */; };
 		4185D5FE26B749140086A47A /* Button-Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4185D5FD26B749140086A47A /* Button-Extensions.swift */; };
+		41A5D86826C1518500F9A9C0 /* SecondSceneWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A5D86326C1518500F9A9C0 /* SecondSceneWorker.swift */; };
+		41A5D86A26C1518500F9A9C0 /* SecondSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A5D86526C1518500F9A9C0 /* SecondSceneViewController.swift */; };
+		41A5D86C26C1518500F9A9C0 /* SecondSceneViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A5D86726C1518500F9A9C0 /* SecondSceneViewModel.swift */; };
+		41A5D8AE26C178B800F9A9C0 /* SecondSceneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41A5D8AC26C178B800F9A9C0 /* SecondSceneViewController.xib */; };
 		41CBABB226B624D000E99F7D /* MVVM-Template in Resources */ = {isa = PBXBuildFile; fileRef = 41CBABB126B624D000E99F7D /* MVVM-Template */; };
 		41DE0FD326B5FD82007C6AB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DE0FD226B5FD82007C6AB0 /* AppDelegate.swift */; };
 		41DE0FD726B5FD82007C6AB0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DE0FD626B5FD82007C6AB0 /* HomeViewController.swift */; };
@@ -54,6 +58,10 @@
 		4185D5F326B73E5D0086A47A /* Label-Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Label-Extensions.swift"; sourceTree = "<group>"; };
 		4185D5F826B744720086A47A /* ImageView-Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageView-Extensions.swift"; sourceTree = "<group>"; };
 		4185D5FD26B749140086A47A /* Button-Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button-Extensions.swift"; sourceTree = "<group>"; };
+		41A5D86326C1518500F9A9C0 /* SecondSceneWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSceneWorker.swift; sourceTree = "<group>"; };
+		41A5D86526C1518500F9A9C0 /* SecondSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSceneViewController.swift; sourceTree = "<group>"; };
+		41A5D86726C1518500F9A9C0 /* SecondSceneViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSceneViewModel.swift; sourceTree = "<group>"; };
+		41A5D8AC26C178B800F9A9C0 /* SecondSceneViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondSceneViewController.xib; sourceTree = "<group>"; };
 		41CBABB126B624D000E99F7D /* MVVM-Template */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "MVVM-Template"; sourceTree = "<group>"; };
 		41DE0FCF26B5FD82007C6AB0 /* iOS-MVVM-C-Template.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-MVVM-C-Template.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		41DE0FD226B5FD82007C6AB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +112,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		41A5D86226C1516500F9A9C0 /* SecondSceneExample */ = {
+			isa = PBXGroup;
+			children = (
+				41A5D86326C1518500F9A9C0 /* SecondSceneWorker.swift */,
+				41A5D86526C1518500F9A9C0 /* SecondSceneViewController.swift */,
+				41A5D86726C1518500F9A9C0 /* SecondSceneViewModel.swift */,
+				41A5D8AC26C178B800F9A9C0 /* SecondSceneViewController.xib */,
+			);
+			path = SecondSceneExample;
+			sourceTree = "<group>";
+		};
 		41DE0FC626B5FD82007C6AB0 = {
 			isa = PBXGroup;
 			children = (
@@ -127,7 +146,9 @@
 		41DE0FD126B5FD82007C6AB0 /* iOS-MVVM-C-Template */ = {
 			isa = PBXGroup;
 			children = (
+				41A5D86226C1516500F9A9C0 /* SecondSceneExample */,
 				41DE101326B5FE2C007C6AB0 /* ScreenExample */,
+				417BF2CD26B8624C00CD51D5 /* HomeModels.swift */,
 				41DE100B26B5FDB5007C6AB0 /* Fundamentals */,
 				41DE0FE026B5FD82007C6AB0 /* Info.plist */,
 			);
@@ -180,7 +201,6 @@
 				41DE101C26B5FE47007C6AB0 /* HomeView.swift */,
 				41DE102426B5FE84007C6AB0 /* HomeWorker.swift */,
 				41DE103C26B600F3007C6AB0 /* HomeRouter.swift */,
-				417BF2CD26B8624C00CD51D5 /* HomeModels.swift */,
 			);
 			path = ScreenExample;
 			sourceTree = "<group>";
@@ -339,6 +359,7 @@
 			files = (
 				41DE0FDF26B5FD82007C6AB0 /* LaunchScreen.storyboard in Resources */,
 				41DE0FDC26B5FD82007C6AB0 /* Assets.xcassets in Resources */,
+				41A5D8AE26C178B800F9A9C0 /* SecondSceneViewController.xib in Resources */,
 				41CBABB226B624D000E99F7D /* MVVM-Template in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -364,8 +385,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41A5D86826C1518500F9A9C0 /* SecondSceneWorker.swift in Sources */,
 				41DE104826B61F7F007C6AB0 /* NavigationTitle.swift in Sources */,
 				41DE103826B6005A007C6AB0 /* AppNavigationController.swift in Sources */,
+				41A5D86A26C1518500F9A9C0 /* SecondSceneViewController.swift in Sources */,
 				4185D5F426B73E5D0086A47A /* Label-Extensions.swift in Sources */,
 				41DE100E26B5FDCD007C6AB0 /* BaseView.swift in Sources */,
 				4185D5F926B744720086A47A /* ImageView-Extensions.swift in Sources */,
@@ -376,6 +399,7 @@
 				41DE104E26B624B4007C6AB0 /* Makefile in Sources */,
 				417BF2C626B81F5900CD51D5 /* NetworkService.swift in Sources */,
 				41DE103226B5FFA6007C6AB0 /* AppRouter.swift in Sources */,
+				41A5D86C26C1518500F9A9C0 /* SecondSceneViewModel.swift in Sources */,
 				4185D5FE26B749140086A47A /* Button-Extensions.swift in Sources */,
 				41DE101D26B5FE47007C6AB0 /* HomeView.swift in Sources */,
 				41DE102526B5FE84007C6AB0 /* HomeWorker.swift in Sources */,

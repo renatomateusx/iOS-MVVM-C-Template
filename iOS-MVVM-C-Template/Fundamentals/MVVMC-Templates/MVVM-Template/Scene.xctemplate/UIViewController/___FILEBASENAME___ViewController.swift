@@ -6,6 +6,8 @@
 //  Copyright (c) ___YEAR___ ___ORGANIZATIONNAME___. All rights reserved.
 //
 
+import UIKit
+
 final class ___VARIABLE_sceneName___ViewController: UIViewController {
   private(set) lazy var baseView: ___VARIABLE_productName: identifier___View = {
   	let view = ___VARIABLE_productName: identifier___View()

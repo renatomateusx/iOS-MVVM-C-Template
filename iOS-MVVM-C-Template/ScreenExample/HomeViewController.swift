@@ -45,6 +45,7 @@ final class HomeViewController: UIViewController {
     baseView.imageView.image = UIImage(named: viewModel.imageName)
     baseView.buttonCancel.setTitle(viewModel.buttonCancelTitle, for: .normal)
     baseView.buttonConfirm.setTitle(viewModel.buttonConfirmTitle, for: .normal)
+    baseView.buttonConfirm.addTarget(self, action: #selector(didTapConfirm), for: .touchUpInside)
   }
 }
 
@@ -57,4 +58,8 @@ extension HomeViewController {
   }
 }
 
-
+private extension HomeViewController {
+  @objc func didTapConfirm() {
+    viewModel.confirmData()
+  }
+}

@@ -20,7 +20,7 @@ protocol HomeViewModelProtocol: AnyObject, NavigationTitle {
   var buttonCancelTitle: String { get }
   var buttonConfirmTitle: String { get }
   
-  func doSomething()
+  func confirmData()
   func getConsent()
 }
 
@@ -28,12 +28,12 @@ final class HomeViewModel {
   private var service: HomeWorker
   private weak var navigationDelegate: HomeNavigationDelegate?
   
-  let navigationTitle = "Home View"
-  let imageName = "Home"
-  let titleLabel = "Title Label"
-  let subTitleLabel = "SubTitle Label"
-  let buttonCancelTitle = "Cancelar"
-  let buttonConfirmTitle = "Confirmar"
+  let navigationTitle: String = "Home View"
+  let imageName: String = "Home"
+  let titleLabel: String = "Title Label"
+  let subTitleLabel: String = "SubTitle Label"
+  let buttonCancelTitle: String = "Cancelar"
+  let buttonConfirmTitle: String = "Confirmar"
   
   init(service: HomeWorker = HomeWorker(),
        navigationDelegate: HomeNavigationDelegate? = nil) {
@@ -45,8 +45,8 @@ final class HomeViewModel {
 //MARK: HomeViewModelProtocol
 
 extension HomeViewModel: HomeViewModelProtocol {
-  func doSomething() {
-    print("Example of implementing something")
+  func confirmData() {
+    navigationDelegate?.verifyMyData()
   }
   
   func getConsent() {
